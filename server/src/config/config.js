@@ -1,5 +1,5 @@
 module.exports = {
-  port: 8081,
+  port: process.env.PORT || 8081,
   db: {
     database: process.env.DB_NAME || 'atthemat',
     user: process.env.DB_USER || 'atthemat',
@@ -7,7 +7,7 @@ module.exports = {
     options: {
       dialect: process.env.DIALECT || 'sqlite',
       host: process.env.HOST || 'localhost',
-      storage: './atthemat.sqlite'      
+      storage: './atthemat.sqlite'
     }
   }
 }
