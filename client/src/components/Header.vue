@@ -1,0 +1,50 @@
+<template>
+  <v-toolbar fixed class="cyan" dark>
+    <v-toolbar-title class="mr-4">
+
+      <span
+        class="home"
+        @click="navigateTo({name: 'root'})">
+        @ the mat
+      </span>
+    </v-toolbar-title>
+
+    <v-spacer></v-spacer>
+
+    <v-toolbar-items>
+      <v-btn flat dark
+        @click="navigateTo({name: 'login'})">
+        login
+      </v-btn>
+    </v-toolbar-items>
+
+    <v-toolbar-items>
+      <v-btn flat dark
+        @click="navigateTo({name: 'register'})">
+          sign up
+      </v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
+</template>
+
+<script>
+export default {
+  methods: {
+    navigateTo (route) {
+      this.$router.push(route)
+    }
+  }
+}
+</script>
+
+
+<style scoped>
+.home {
+  cursor:pointer;
+}
+
+.home:hover {
+  color: pink;
+}
+
+</style>
