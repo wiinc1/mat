@@ -5,7 +5,7 @@
       <span
         class="home"
         @click="navigateTo({name: 'root'})">
-        @ the mat
+        <img src='@/static/images.jpg'>
       </span>
     </v-toolbar-title>
 
@@ -20,7 +20,7 @@
       </v-btn>
     </v-toolbar-items>
 
-    <v-toolbar-items
+    <v-toolbar-items>
       <v-btn
         v-if="!$store.state.isUserLoggedIn"
         flat
@@ -36,7 +36,8 @@
         @click="navigateTo({name: 'register'})">
           sign up
       </v-btn>
-
+     </v-toolbar-items> 
+    <v-toolbar-items>
       <v-btn
         v-if="$store.state.isUserLoggedIn"
         flat

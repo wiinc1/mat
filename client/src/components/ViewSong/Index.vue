@@ -26,7 +26,7 @@ import Tab from '@/components/ViewSong/Tab'
 import SongMetadata from '@/components/ViewSong/SongMetadata'
 import YouTube from '@/components/ViewSong/YouTube'
 import SongService from '@/services/SongService'
-import Panel from '@/components/Panel'
+import Panel from '@/components/globals/Panel'
 
 export default {
   data () {

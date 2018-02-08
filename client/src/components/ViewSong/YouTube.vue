@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Panel from '@/components/Panel'
+import Panel from '@/components/globals/Panel'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 
 export default {
