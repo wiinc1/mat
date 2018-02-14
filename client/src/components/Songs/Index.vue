@@ -2,7 +2,7 @@
   <v-layout column>
     <v-flex xs6 offset-xs3>
       <songs-search-panel />
-      <songs-panel />
+      <songs-panel class="mt-2" />
     </v-flex>
   </v-layout>
 </template>
@@ -11,21 +11,15 @@
 import SongsPanel from '@/components/Songs/SongsPanel'
 import SongsSearchPanel from '@/components/Songs/SongsSearchPanel'
 import SongService from '@/services/SongService'
-import Panel from '@/components/globals/Panel'
+
 export default {
   components: {
-    Panel,
     SongsPanel,
     SongsSearchPanel
   },
   data () {
     return {
       songs: null
-    }
-  },
-  methods: {
-    navigateTo (route) {
-      this.$router.push(route)
     }
   },
   async mounted () {

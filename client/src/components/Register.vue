@@ -18,7 +18,7 @@
           ></v-text-field>
         </form>
         <br>
-        <div class="error" v-html="error" />
+        <div class="danger-alert" v-html="error" />
         <br>
         <v-btn
           class="cyan" dark
@@ -32,7 +32,7 @@
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
-import Panel from '@/components/globals/Panel'
+
 export default {
   data () {
     return {
@@ -50,20 +50,17 @@ export default {
         })
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+        this.$router.push({
+          name: 'songs'
+        })
       } catch (error) {
         this.error = error.response.data.error
       }
     }
-  },
-  components: {
-    Panel
   }
 }
 </script>
 
 
 <style scoped>
-.error {
-  color: red;
-}
 </style>
